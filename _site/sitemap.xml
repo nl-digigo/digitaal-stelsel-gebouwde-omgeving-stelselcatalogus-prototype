@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/services/0123456789/</loc>
+<lastmod>2023-10-31T10:21:27+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/services/05357B1C-A934-4BB2-A7CD-42948DA52379/</loc>
+<lastmod>2023-10-31T10:21:27+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/services/105D19C7-02B1-481F-8B98-0C0F2F5EBB4B/</loc>
+<lastmod>2023-10-31T10:21:27+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/services/49F6E662-F055-4AAC-96B2-E833FA5F5414/</loc>
+<lastmod>2023-10-31T10:21:27+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/about/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/zoeken/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/services/</loc>
+</url>
+</urlset>
