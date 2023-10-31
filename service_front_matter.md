@@ -1,0 +1,3 @@
+---
+layout: page
+search: true
