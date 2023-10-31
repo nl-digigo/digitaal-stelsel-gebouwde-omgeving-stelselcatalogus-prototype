@@ -6,6 +6,8 @@
   url: https://afsprakenstelseldsgo.atlassian.net/wiki/spaces/DSGO/overview?homepageId=118521858
 - title: DSGO Stelselvoorzieningen
   url: https://github.com/digigo-nl
+- title: API
+  url: https://dsgo-stelselcatalogus-api-prototype.azurewebsites.net/docs
 
 - title: Zoeken
   url: /zoeken/
