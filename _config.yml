@@ -66,6 +66,7 @@ collections:
 #
 exclude:
 - "service_front_matter.md"
+- vendor/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
