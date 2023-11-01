@@ -18,7 +18,7 @@
 skin: "/assets/css/skins/default.css"
 locale: nl-NL
 title: "Prototype DSGO Stelselcatalogus"
-description: "Hier vind je alle DSGO datadiensten."
+description: "Hier vind je DSGO datadiensten."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "images/logo_dsgo_yellow_square.png" # path of site logo, e.g. "/images/logo.png"
