@@ -1,5 +1,45 @@
 import json
 import os
+from PIL import Image
+
+def add_white_background(png_file_path, output_file_path):
+    # Open the PNG image
+    png_image = Image.open(png_file_path)
+
+    # Check if the image has an alpha channel
+    if png_image.mode in ('RGBA', 'LA') or (png_image.mode == 'P' and 'transparency' in png_image.info):
+        
+        # Create a white background image with the same size as the PNG image
+        white_background = Image.new("RGB", png_image.size, (255, 255, 255))
+        
+        # Paste the PNG image onto the background image
+        white_background.paste(png_image, (0, 0), png_image)
+        
+        # Save the result
+        white_background.save(output_file_path, "PNG")
+    else:
+        # If the PNG doesn't have transparency, no need to add a background
+        png_image.save(output_file_path)
+
+def process_all_pngs(folder_path):
+    # Loop over all files in the given folder
+    for filename in os.listdir(folder_path):
+        # Check if the file is a PNG
+        if filename.lower().endswith('.png'):
+            file_path = os.path.join(folder_path, filename)
+            # Define the output file path (this could be the same as input or different)
+            output_file_path = os.path.join(folder_path, filename)
+            # Add a white background to the PNG
+            add_white_background(file_path, output_file_path)
+
+# Usage
+# Set your folder path here
+# folder_path = '/folder/to/path'
+folder_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'images')
+# Make sure the 'processed' folder exists or create it
+os.makedirs(os.path.join(folder_path), exist_ok=True)
+process_all_pngs(folder_path)
+
 
 # Given JSON data
 file_data_services = 'data_services_list.json'
