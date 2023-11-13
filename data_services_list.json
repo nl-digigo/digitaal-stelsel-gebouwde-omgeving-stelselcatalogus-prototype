@@ -11,7 +11,7 @@
         "version": "v0.1 / proof of concept",
         "token_endpoint": "Not applicable",
         "is_public": "Yes",
-        "endpoint_description": "https://dsgo-test-api-bimvergunningen-ids.azurewebsites.net/docs",
+        "endpoint_description": "https://dsgo-test-api-bimvergunningen-ids.azurewebsites.net/docs/",
         "language": "nl-NL",
         "conforms_to": "Building Smart IDS",
         "level_of_assurance": "Not applicable",
@@ -22,7 +22,7 @@
         "keywords": ["IFC","IDS", "Vergunning", "Permit", "Buildingsmart"],
         "costs": "Not applicable",
         "certificate_subject_name":"Not applicable",
-        "capability_endpoint":"https://dsgo-test-api-bimvergunningen-ids.azurewebsites.net/capabilities",
+        "capability_endpoint":"https://dsgo-test-api-bimvergunningen-ids.azurewebsites.net/capabilities/",
         "tech_contact_point":"Constantijn.molengraaf@digigo.nu",
         "path_image": "images/logo_dsgo_small.png",
         "path_thumbnail": "images/logo_dsgo_small.png"
