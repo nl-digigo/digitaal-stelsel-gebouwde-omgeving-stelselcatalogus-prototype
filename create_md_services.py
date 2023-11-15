@@ -85,18 +85,16 @@ for service in data:
         
         # Write normal-person details
         human_readable_list = [
-            "data_service_provider_name",
-            "service_name",
-            "service_description",
-            "contact_point",
+            "dataServiceProviderName",
+            "feature",
+            "description",
+            "contactPoint",
             "adherence",
-            "version",
-            "conforms_to",
-            "level_of_assurance",
-            "security_level",
-            "acces_rules",
-            "obligations_and_advice",
-            "service_level_agreements",
+            "conformsTo",
+            "levelOfAssurance",
+            "securityLevel",
+            "accessRights",
+            "serviceLevelAgreements",
             "costs"
         ]
         for key in human_readable_list:
