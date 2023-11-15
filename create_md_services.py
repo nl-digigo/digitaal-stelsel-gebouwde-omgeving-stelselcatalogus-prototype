@@ -1,6 +1,7 @@
 import json
 import os
 from PIL import Image
+import re
 
 def add_white_background(file_path, output_file_path):
     with Image.open(file_path) as im:
@@ -61,12 +62,13 @@ def process_all_pngs(folder_path):
 #             # Add a white background to the PNG
 #             add_white_background(file_path, output_file_path)
 
-def transform_string(original_string):
-    # Capitalize the first word
-    transformed_string = original_string[0].upper() + original_string[1:]
-    # Insert a space before "To"
-    transformed_string = transformed_string.replace("To", " to")
-    return transformed_string
+def transform_string(s):
+    # First, replace underscores with spaces
+    s_no_underscores = s.replace("_", " ")
+    # Then, split on capital letters as before, keeping consecutive capitals together
+    s_with_spaces = re.sub(r"(?<=[a-z])([A-Z])|(?<=[A-Z])([A-Z][a-z])", r" \1\2", s_no_underscores)
+    # Finally, capitalize the first letter of each word
+    return ' '.join(word.capitalize() for word in s_with_spaces.split())
 
 # Usage
 # Set your folder path here
@@ -99,7 +101,7 @@ for service in data:
         # Write front matter
         md_file.write(front_matter)
         try:
-            md_file.write(f'title: {service["feature"]}\n')
+            md_file.write(f'texititle: {service["feature"]}\n')
         except:
             md_file.write(f'title: {service["service_name"]}\n')
         try: 
