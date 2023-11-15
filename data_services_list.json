@@ -55,7 +55,7 @@
     {
         "party_id": "Only available for use case partners",
         "dataServiceProviderName": "Wienerberger",
-        "contactPoint": "Willem Pel (willem.pel@digigo.nu)",
+        "contactPoint": "Willem Pel (willem.pel@digigo.nu) can connect you to relevant Wienerberger person",
         "roles": "Data Service Provider",
         "service_id": "00003",
         "feature": "Productdata Wienerberger",

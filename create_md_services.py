@@ -32,6 +32,13 @@ def process_all_pngs(folder_path):
             # Add a white background to the PNG
             add_white_background(file_path, output_file_path)
 
+def format_key(key):
+    # Replace underscores with a space
+    formatted_key = key.replace("_", " ")
+    # Add a space before capital letters
+    formatted_key = ''.join(' ' + char if char.isupper() else char for char in formatted_key).lstrip()
+    return formatted_key
+
 # Usage
 # Set your folder path here
 # folder_path = '/folder/to/path'
@@ -111,9 +118,9 @@ for service in data:
             if key not in ["feature", "description", "path_image", "path_thumbnail", "keywords"] + human_readable_list:
                 # Check if the key contains 'endpoint' or 'Endpoint'
                 if 'endpoint' in key.lower():  # This will check for 'endpoint' in any case
-                    md_file.write(f'<b>{key.capitalize().replace("_", " ")}</b>: [{value}]({value})' + '  \n')
+                    md_file.write(f'<b>{format_key(key.capitalize())}</b>: [{value}]({value})' + '  \n')
                 else:
-                    md_file.write(f'<b>{key.capitalize().replace("_", " ")}</b>: {value}' + '  \n')
+                    md_file.write(f'<b>{format_key(key.capitalize())}</b>: {value}' + '  \n')
 
 
         
