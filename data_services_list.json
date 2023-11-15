@@ -5,7 +5,7 @@
         "contactPoint": "Constantijn Molengraaf (constantijn.molengraaf@digigo.nu)",
         "roles": "To be determined",
         "service_id": "00001",
-        "feature": "IDS-as-a-Service",
+        "feature": "Basisset Indieningsvereisten Vergunningen in IDS",
         "description": "Retrieve basic IDS for building permits as defined in the DSGO adoption project 'BIM building permits'",
         "url": "https://dsgo-test-api-bimvergunningen-ids.azurewebsites.net/",
         "hasPolicy":"None",
