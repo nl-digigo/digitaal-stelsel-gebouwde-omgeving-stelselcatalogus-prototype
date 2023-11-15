@@ -4,22 +4,26 @@ from PIL import Image
 import re
 
 def add_white_background(file_path, output_file_path):
+    # def add_white_background(file_path, output_file_path):
     with Image.open(file_path) as im:
-        # Ensure the image has an alpha channel
+        width, height = im.size
+        square_size = max(width, height)
+        # Create a white background square image with the desired square size
+        background = Image.new('RGB', (square_size, square_size), "WHITE")
+        # Calculate position to paste the image on the background
+        # Horizontally centered, and vertically, it should have equal space at top and bottom
+        position = ((square_size - width) // 2, (square_size - height) // 2)
+
+        # If the image has an alpha channel, keep the processing as is
         if im.mode in ('RGBA', 'LA') or (im.mode == 'P' and 'transparency' in im.info):
-            # Create a white background square image with the same width as the original image's width
-            width, height = im.size
-            square_size = max(width, height)
-            background = Image.new('RGBA', (square_size, square_size), "WHITE")
-            # Calculate position to paste the image on the background
-            position = ((square_size - width) // 2, (square_size - height) // 2)
-            # Paste the image on the background
-            background.paste(im, position, im.split()[3])  # Use alpha channel as mask
-            # Save the image with white background as a new file
-            background = background.convert('RGB')  # Convert to RGB to remove alpha channel
-            background.save(output_file_path)
+            # Paste the image on the background using the alpha channel as mask
+            background.paste(im, position, im.split()[3])
         else:
-            im.save(output_file_path)  # If no alpha channel, save as is
+            # Paste the image on the background without any mask
+            background.paste(im, position)
+        
+        # Save the image with white background as a new file
+        background.save(output_file_path)
 
 def process_all_pngs(folder_path):
     # Loop over all files in the given folder
@@ -31,36 +35,6 @@ def process_all_pngs(folder_path):
             output_file_path = os.path.join(folder_path, filename)
             # Add a white background to the PNG
             add_white_background(file_path, output_file_path)
-
-# def add_white_background(png_file_path, output_file_path):
-#     # Open the PNG image
-#     png_image = Image.open(png_file_path)
-
-#     # Check if the image has an alpha channel
-#     if png_image.mode in ('RGBA', 'LA') or (png_image.mode == 'P' and 'transparency' in png_image.info):
-        
-#         # Create a white background image with the same size as the PNG image
-#         white_background = Image.new("RGB", png_image.size, (255, 255, 255))
-        
-#         # Paste the PNG image onto the background image
-#         white_background.paste(png_image, (0, 0), png_image)
-        
-#         # Save the result
-#         white_background.save(output_file_path, "PNG")
-#     else:
-#         # If the PNG doesn't have transparency, no need to add a background
-#         png_image.save(output_file_path)
-
-# def process_all_pngs(folder_path):
-#     # Loop over all files in the given folder
-#     for filename in os.listdir(folder_path):
-#         # Check if the file is a PNG
-#         if filename.lower().endswith('.png'):
-#             file_path = os.path.join(folder_path, filename)
-#             # Define the output file path (this could be the same as input or different)
-#             output_file_path = os.path.join(folder_path, filename)
-#             # Add a white background to the PNG
-#             add_white_background(file_path, output_file_path)
 
 def transform_string(s):
     # First, replace underscores with spaces
@@ -101,7 +75,7 @@ for service in data:
         # Write front matter
         md_file.write(front_matter)
         try:
-            md_file.write(f'texititle: {service["feature"]}\n')
+            md_file.write(f'title: {service["feature"]}\n')
         except:
             md_file.write(f'title: {service["service_name"]}\n')
         try: 
@@ -152,8 +126,5 @@ for service in data:
                     md_file.write(f'<b>{transform_string(key)}</b>: [{value}]({value})' + '  \n')
                 else:
                     md_file.write(f'<b>{transform_string(key)}</b>: {value}' + '  \n')
-
-
-        
 
 print("Markdown files created.")
