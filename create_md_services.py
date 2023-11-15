@@ -33,14 +33,11 @@ def process_all_pngs(folder_path):
             add_white_background(file_path, output_file_path)
 
 def transform_string(original_string):
-    # Replace underscores with spaces
-    transformed_string = original_string.replace("_", " ")
-    # Split the string into words to capitalize the first letter of the first word
-    words = transformed_string.split()
-    # Capitalize the first word and join back into a string
-    transformed_string = ' '.join([words[0].capitalize()] + words[1:])
+    # Capitalize the first word
+    transformed_string = original_string[0].upper() + original_string[1:]
+    # Insert a space before "To"
+    transformed_string = transformed_string.replace("To", " to")
     return transformed_string
-
 
 # Usage
 # Set your folder path here
