@@ -27,7 +27,7 @@ def process_all_pngs(folder_path):
         if filename.lower().endswith('.png'):
             file_path = os.path.join(folder_path, filename)
             # Define the output file path (this could be the same as input or different)
-            output_file_path = os.path.join(folder_path, 'processed_' + filename)
+            output_file_path = os.path.join(folder_path, filename)
             # Add a white background to the PNG
             add_white_background(file_path, output_file_path)
 
