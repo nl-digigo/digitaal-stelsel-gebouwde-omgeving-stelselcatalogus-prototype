@@ -2,24 +2,23 @@ import json
 import os
 from PIL import Image
 
-def add_white_background(png_file_path, output_file_path):
-    # Open the PNG image
-    png_image = Image.open(png_file_path)
-
-    # Check if the image has an alpha channel
-    if png_image.mode in ('RGBA', 'LA') or (png_image.mode == 'P' and 'transparency' in png_image.info):
-        
-        # Create a white background image with the same size as the PNG image
-        white_background = Image.new("RGB", png_image.size, (255, 255, 255))
-        
-        # Paste the PNG image onto the background image
-        white_background.paste(png_image, (0, 0), png_image)
-        
-        # Save the result
-        white_background.save(output_file_path, "PNG")
-    else:
-        # If the PNG doesn't have transparency, no need to add a background
-        png_image.save(output_file_path)
+def add_white_background(file_path, output_file_path):
+    with Image.open(file_path) as im:
+        # Ensure the image has an alpha channel
+        if im.mode in ('RGBA', 'LA') or (im.mode == 'P' and 'transparency' in im.info):
+            # Create a white background square image with the same width as the original image's width
+            width, height = im.size
+            square_size = max(width, height)
+            background = Image.new('RGBA', (square_size, square_size), "WHITE")
+            # Calculate position to paste the image on the background
+            position = ((square_size - width) // 2, (square_size - height) // 2)
+            # Paste the image on the background
+            background.paste(im, position, im.split()[3])  # Use alpha channel as mask
+            # Save the image with white background as a new file
+            background = background.convert('RGB')  # Convert to RGB to remove alpha channel
+            background.save(output_file_path)
+        else:
+            im.save(output_file_path)  # If no alpha channel, save as is
 
 def process_all_pngs(folder_path):
     # Loop over all files in the given folder
@@ -28,9 +27,39 @@ def process_all_pngs(folder_path):
         if filename.lower().endswith('.png'):
             file_path = os.path.join(folder_path, filename)
             # Define the output file path (this could be the same as input or different)
-            output_file_path = os.path.join(folder_path, filename)
+            output_file_path = os.path.join(folder_path, 'processed_' + filename)
             # Add a white background to the PNG
             add_white_background(file_path, output_file_path)
+
+# def add_white_background(png_file_path, output_file_path):
+#     # Open the PNG image
+#     png_image = Image.open(png_file_path)
+
+#     # Check if the image has an alpha channel
+#     if png_image.mode in ('RGBA', 'LA') or (png_image.mode == 'P' and 'transparency' in png_image.info):
+        
+#         # Create a white background image with the same size as the PNG image
+#         white_background = Image.new("RGB", png_image.size, (255, 255, 255))
+        
+#         # Paste the PNG image onto the background image
+#         white_background.paste(png_image, (0, 0), png_image)
+        
+#         # Save the result
+#         white_background.save(output_file_path, "PNG")
+#     else:
+#         # If the PNG doesn't have transparency, no need to add a background
+#         png_image.save(output_file_path)
+
+# def process_all_pngs(folder_path):
+#     # Loop over all files in the given folder
+#     for filename in os.listdir(folder_path):
+#         # Check if the file is a PNG
+#         if filename.lower().endswith('.png'):
+#             file_path = os.path.join(folder_path, filename)
+#             # Define the output file path (this could be the same as input or different)
+#             output_file_path = os.path.join(folder_path, filename)
+#             # Add a white background to the PNG
+#             add_white_background(file_path, output_file_path)
 
 def transform_string(original_string):
     # Capitalize the first word
