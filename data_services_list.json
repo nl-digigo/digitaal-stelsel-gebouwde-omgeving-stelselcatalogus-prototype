@@ -129,32 +129,5 @@
         "capability_endpoint":"Only available for use case partners",
         "path_image": "images/logo_2ba.png",
         "path_thumbnail": "images/logo_2ba.png"
-    },
-    {
-        "party_id": "",
-        "dataServiceProviderName": "digiGO",
-        "contactPoint": "Bauke Rietveld (bauke.rietveld@digigo.nu)",
-        "roles": "To be determined",
-        "service_id": "62934",
-        "feature": "Basisset Indieningsvereisten Vergunningen in IDS",
-        "description": "Retrieve basic IDS for building permits as defined in the DSGO adoption project 'BIM building permits'",
-        "url": "https://dsgo-test-api-bimvergunningen-ids.azurewebsites.net/",
-        "hasPolicy":"None",
-        "version": "v0.1 / proof of concept",
-        "token_endpoint": "Not applicable",
-        "is_public": "Yes",
-        "endpointDescription": "https://dsgo-test-api-bimvergunningen-ids.azurewebsites.net/docs/",
-        "conformsTo": "Building Smart IDS",
-        "levelOfAssurance": "Not applicable",
-        "securityLevel": "Not applicable",
-        "accessRights": "none, this is a public data service",
-        "serviceLevelAgreements": "Availability of the service is not guaranteed",
-        "license":"None",
-        "keywords": ["IFC","IDS", "Vergunning", "Permit", "Buildingsmart"],
-        "costs": "Not applicable",
-        "certificateSubjectName":"Not applicable",
-        "capability_endpoint":"https://dsgo-test-api-bimvergunningen-ids.azurewebsites.net/capabilities",
-        "path_image": "images/logo_dsgo_small.png",
-        "path_thumbnail": "images/logo_dsgo_small.png"
     }
 ]
