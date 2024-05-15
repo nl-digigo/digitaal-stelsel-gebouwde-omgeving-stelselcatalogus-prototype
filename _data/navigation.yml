@@ -7,7 +7,7 @@
 - title: DSGO Stelselvoorzieningen
   url: https://www.digigo.nu/digitaal-stelsel/afsprakenstelsel-en-voorzieningen
 - title: Stelselcatalogus API
-  url: https://dsgo-stelselcatalogus-api-prototype.azurewebsites.net/docs
+  url: https://dsgo-stelselcatalogus-apiv2-prototype.azurewebsites.net/docs
 
 - title: Zoeken
   url: /zoeken/
