@@ -1,19 +1,13 @@
-# Sample site navigation bar links
+# Site navigation bar links
 
 - title: Home
   url: /
 - title: Over het DSGO
-  url: https://afsprakenstelseldsgo.atlassian.net/wiki/spaces/DSGO/overview?homepageId=118521858
+  url: https://afsprakenstelseldsgo.atlassian.net/wiki/spaces/DSGO/
 - title: DSGO Stelselvoorzieningen
-  url: https://digigo.nu
+  url: https://www.digigo.nu/digitaal-stelsel/afsprakenstelsel-en-voorzieningen
 - title: Stelselcatalogus API
-  url: https://dsgo-stelselcatalogus-api-prototype.azurewebsites.net/docs
+  url: https://dsgo-stelselcatalogus-apiv2-prototype.azurewebsites.net/docs
 
 - title: Zoeken
   url: /zoeken/
-# - title: Recipes
-#   url: /recipes/
-# - title: Search
-#   url: /search/
-# - title: External Page
-#   url: https://the-page.com/you-want-to-link-to.html

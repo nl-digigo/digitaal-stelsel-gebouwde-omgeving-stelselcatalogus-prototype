@@ -16,7 +16,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -42,8 +42,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      # - name: Pre-process the latest json files 
-      #   run: python create_md_services.py
+      - name: Pre-process the latest json files 
+        run: python create_md_services.py
+      - name: Commit and push if changes
+        run: |
+          git config --global user.name 'Constantijn Molengraaf'
+          git config --global user.email 'constantijn.molengraaf@innopay.com'
+          git add -A
+          git commit -m "Preprocessed data" || exit 0   # This will not fail if there's nothing to commit
+          git push
       - name: Setup Ruby
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
