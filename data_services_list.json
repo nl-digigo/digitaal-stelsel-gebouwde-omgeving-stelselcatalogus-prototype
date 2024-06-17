@@ -30,7 +30,7 @@
         "contactPoint": "info@centraalregistertechniek.nl",
         "roles": "In toetredingsproces voor datadienstaanbieder",
         "service_id": "14c760b6-0983-4064-aef0-7a7bb64a25a3",
-        "feature": "Token endpoint reference implementation (prototype)",
+        "feature": "Register van bedrijfs-, vestigings- en persoonsregistraties",
         "description": "In het Register staan identificerende en kwalificerende registraties van personen, bedrijven en vestigingen, waardoor je kan zien welke personen/bedrijven welke registratie hebben",
         "url": "https://dsgo.api.test.registerservice.org/v1/",
         "hasPolicy":"None",
