@@ -44,7 +44,7 @@
         "securityLevel": "Not applicable",
         "accessRights": "In overleg met Stichting Centraal Register Techniek",
         "serviceLevelAgreements": "Generiek gepubliceerde SLA die CRT van toepassing verklaard op al haar diensten.",
-        "keywords": ["Token","Future Insight","Referentie implementatie"],
+        "keywords": ["CRT","Certificaten"],
         "costs": "In overleg met Centraal Register Techniek",
         "path_image": "images/logo_CRT.png",
         "path_thumbnail": "images/logo_CRT.png"
