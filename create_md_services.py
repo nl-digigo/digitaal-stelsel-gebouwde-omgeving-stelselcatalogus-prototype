@@ -68,6 +68,19 @@ output_directory = "_services"
 if not os.path.exists(output_directory):
     os.makedirs(output_directory)
 
+# Iterate through all files in the directory
+for filename in os.listdir(output_directory):
+    # Check if the file has a .md extension
+    if filename.endswith('.md'):
+        # Construct the full file path
+        file_path = os.path.join(output_directory, filename)
+        try:
+            # Delete the file
+            os.remove(file_path)
+            print(f"Deleted: {file_path}")
+        except Exception as e:
+            print(f"Error deleting file {file_path}: {e}")
+
 # Iterate over the JSON data to create markdown files
 for service in data:
     with open(os.path.join(output_directory, f'{service["service_id"]}.md'), 'w') as md_file:
