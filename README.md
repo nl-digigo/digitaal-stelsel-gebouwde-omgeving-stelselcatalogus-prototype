@@ -7,7 +7,7 @@ This repository is the backend of the DSGO prototype service catalogue, a curate
 
 If you are a data service provider looking to include your service in our catalogue, please adhere to the following process:
 
-- **Email the Admin**: Initiate your request by sending an email to [afsprakenstelseldsgo@digigo.nu] with the subject line "Inclusion Request for Data Services Catalogue." Provide a comprehensive description of your service in line with the DSGO afsprakenstelsel.
+- **Email the Admin**: Initiate your request by sending an email to [dsgo@digigo.nu] with the subject line "Inclusion Request for Data Services Catalogue." Provide a comprehensive description of your service in line with the DSGO afsprakenstelsel.
   
 - **Await Confirmation**: Post-submission, your application will be evaluated based on relevance and utility. The admin will contact you for any additional information needed or to communicate the outcome of your request.
 
