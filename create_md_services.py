@@ -135,7 +135,7 @@ for service in data:
         for key, value in service.items():
             if key not in ["feature", "description", "path_image", "path_thumbnail", "keywords"] + human_readable_list:
                 # Check if the key contains 'endpoint' or 'Endpoint'
-                if 'endpoint' in key.lower():  # This will check for 'endpoint' in any case
+                if 'endpoint' in key.lower() or 'url' in key.lower():  # This will check for 'endpoint' in any case
                     md_file.write(f'<b>{transform_string(key)}</b>: [{value}]({value})' + '  \n')
                 else:
                     md_file.write(f'<b>{transform_string(key)}</b>: {value}' + '  \n')
