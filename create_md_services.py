@@ -110,7 +110,7 @@ for service in data:
         
         # Write normal-person details
         human_readable_list = [
-            "dataServiceProviderName",
+            "party_name",
             "feature",
             "description",
             "contactPoint",

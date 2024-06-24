@@ -1,9 +1,19 @@
 [
     {
         "party_id": "EU.EORI.NL063202158",
-        "dataServiceProviderName": "ILS Configurator",
+        "party_name": "ILS Configurator",
         "contactPoint": "ils-configurator@digigo.nu",
-        "roles": "In toetredingsproces voor datadienstaanbieder",
+        "roles": [
+            {
+                "role": "Technically Compliant Data Service Provider"
+            }
+        ],
+        "adherence": {
+            "status": "Pending",
+            "start_date": "2024-06-18T00:00:00",
+            "end_date": "None"
+            },
+        "certifications": [],
         "service_id": "40d69a50-6230-403e-8488-eba40efbf1bc",
         "feature": "ILS Configurator - IDS",
         "description": "Omwille van een PoC heeft de ILS Configurator een datadienst beschikbaar gemaakt waarmee het mogelijk is om de IDS export op te vragen van de projecten waar de gebruiker toegang tot heeft",
@@ -11,6 +21,7 @@
         "hasPolicy":"Geen",
         "version": "v0.1 / proof of concept",
         "token_endpoint": "",
+        "dataServiceConsumerType" : "M2M",
         "is_public": "Ja",
         "endpointDescription": "",
         "conformsTo": "IDS (Information Delivery Specification – buildingSMART International)",
@@ -26,9 +37,19 @@
     },
     {
         "party_id": "EU.EORI.NL075394529",
-        "dataServiceProviderName": "Stichting Centraal Register Techniek",
+        "party_name": "Stichting Centraal Register Techniek",
         "contactPoint": "info@centraalregistertechniek.nl",
-        "roles": "In toetredingsproces voor datadienstaanbieder",
+        "roles": [
+            {
+                "role": "Technically Compliant Data Service Provider"
+            }
+        ],
+        "adherence": {
+            "status": "Pending",
+            "start_date": "2024-06-18T00:00:00",
+            "end_date": "None"
+            },
+        "certifications": [],
         "service_id": "14c760b6-0983-4064-aef0-7a7bb64a25a3",
         "feature": "Register van bedrijfs-, vestigings- en persoonsregistraties",
         "description": "In het Register staan identificerende en kwalificerende registraties van personen, bedrijven en vestigingen, waardoor je kan zien welke personen/bedrijven welke registratie hebben",
@@ -44,6 +65,7 @@
         "securityLevel": "Not applicable",
         "accessRights": "In overleg met Stichting Centraal Register Techniek",
         "serviceLevelAgreements": "Generiek gepubliceerde SLA die CRT van toepassing verklaard op al haar diensten.",
+        "license":"Geen",
         "keywords": ["CRT","Certificaten"],
         "costs": "In overleg met Centraal Register Techniek",
         "path_image": "images/logo_CRT.png",
@@ -51,9 +73,19 @@
     },
     {
         "party_id": "Nader aan te vullen",
-        "dataServiceProviderName": "TiQiT",
+        "party_name": "TiQiT",
         "contactPoint": "info@tiqit.nl",
-        "roles": "in toetredingsproces voor datadienstaanbieder",
+        "roles": [
+            {
+                "role": "Technically Compliant Data Service Provider"
+            }
+        ],
+        "adherence": {
+            "status": "Pending",
+            "start_date": "2024-06-18T00:00:00",
+            "end_date": "None"
+            },
+        "certifications": [],
         "service_id": "27d998c5-089c-4206-8ffe-bb3928adfd2d",
         "feature": "Emissie datadienst",
         "description": "Momenteel een POC datadienst om emissie data beschikbaar te stellen van projecten waar de gebruiker toegang toe heeft.",
@@ -69,6 +101,7 @@
         "securityLevel": "Niet van toepassing",
         "accessRights": "Beschikbaar voor gebruikspartners (opvragen via Info@tiqit.nl)",
         "serviceLevelAgreements": "Beschikbaarheid is niet gegarandeerd gegeven (V0.0.2/Proof of Concept)",
+        "license":"Geen",
         "keywords": ["TiqiT"],
         "costs": "Niet van toepassing",
         "path_image": "images/logo_TiQiT.png",
@@ -76,9 +109,19 @@
     },    
     {
         "party_id": "EU.EORI.NL063664836",
-        "dataServiceProviderName": "Future Insight",
+        "party_name": "Future Insight",
         "contactPoint": "Ed de Later (ed@futureinsight.nl)",
-        "roles": "To be determined",
+        "roles": [
+            {
+                "role": "Nader te bepalen"
+            }
+        ],
+        "adherence": {
+            "status": "NotActive",
+            "start_date": "2024-06-18T00:00:00",
+            "end_date": "None"
+            },
+        "certifications": [],
         "service_id": "bc4b2f11-1050-4fdb-bc43-dc7f3d18f0c2",
         "feature": "DEMO - Token endpoint reference implementation (prototype)",
         "description": "Token endpoint example. With the access_token a service can be accessed",
@@ -86,6 +129,7 @@
         "hasPolicy":"None",
         "version": "v0.0.3 / proof of concept",
         "token_endpoint": "https://dsgo-test.clearly.app/api/connect/token",
+        "dataServiceConsumerType" : "M2M",
         "is_public": "Yes",
         "endpointDescription": "https://dsgo-test.clearly.app/docs",
         "conformsTo": "DSGO",
@@ -93,6 +137,7 @@
         "securityLevel": "Not applicable",
         "accessRights": "This service is provided only for demonstration purposes within the DSGO program",
         "serviceLevelAgreements": "Availability of the service is not guaranteed",
+        "license":"Geen",
         "keywords": ["Token","Future Insight","Referentie implementatie"],
         "costs": "Not applicable",
         "path_image": "images/logo_future_insights.png",
@@ -100,9 +145,19 @@
     },
     {
         "party_id": "Only available for use case partners",
-        "dataServiceProviderName": "Wienerberger",
+        "party_name": "Wienerberger",
         "contactPoint": "Leendert van der Waal (leendert.van.der.waal@wienerberger.com)",
-        "roles": "Data Service Provider",
+        "roles": [
+            {
+                "role": "Nader te bepalen"
+            }
+        ],
+        "adherence": {
+            "status": "NotActive",
+            "start_date": "2024-06-18T00:00:00",
+            "end_date": "None"
+            },
+        "certifications": [],
         "service_id": "4affb15c-a01c-47a5-88e3-4be7dde466b2",
         "feature": "DEMO - Productdata Wienerberger",
         "description": "Retrieve basis productdata with etim features",
@@ -110,6 +165,7 @@
         "hasPolicy":"None",
         "version": "v0.1 / proof of concept",
         "token_endpoint": "",
+        "dataServiceConsumerType" : "M2M",
         "is_public": "Yes",
         "endpointDescription": "",
         "conformsTo": "DICO product line",
@@ -117,6 +173,7 @@
         "securityLevel": "Not applicable",
         "accessRights": "This service is provided only for demonstration purposes within the DSGO program",
         "serviceLevelAgreements": "Availability of the service is not guaranteed",
+        "license":"Geen",
         "keywords": ["Product data","Wienerberger","ETIM", "DICO"],
         "costs": "Not applicable",
         "path_image": "images/logo_Wienerberger.png",
@@ -124,9 +181,19 @@
     },
     {
         "party_id": "Only available for use case partners",
-        "dataServiceProviderName": "2BA",
+        "party_name": "2BA",
         "contactPoint": "Marten Kreijenbroek (mnk@2ba.nl)",
-        "roles": "Data Service Provider",
+        "roles": [
+            {
+                "role": "Nader te bepalen"
+            }
+        ],
+        "adherence": {
+            "status": "NotActive",
+            "start_date": "2024-06-18T00:00:00",
+            "end_date": "None"
+            },
+        "certifications": [],
         "service_id": "7e8bef74-1bf1-403a-9c31-afc8041a2c06",
         "feature": "DEMO - Productdata 2BA",
         "description": "Retrieve basis productdata with etim features",
@@ -134,6 +201,7 @@
         "hasPolicy":"None",
         "version": "v0.1 / proof of concept",
         "token_endpoint": "",
+        "dataServiceConsumerType" : "M2M",
         "is_public": "Yes",
         "endpointDescription": "",
         "conformsTo": "DICO product line",
@@ -141,6 +209,7 @@
         "securityLevel": "Not applicable",
         "accessRights": "This service is provided only for demonstration purposes within the DSGO program",
         "serviceLevelAgreements": "Availability of the service is not guaranteed",
+        "license":"Geen",
         "keywords": ["Product data","2BA","ETIM", "DICO"],
         "costs": "Not applicable",
         "path_image": "images/logo_2ba.png",
@@ -148,9 +217,19 @@
     },
     {
         "party_id": "Only available for use case partners",
-        "dataServiceProviderName": "2BA",
+        "party_name": "2BA",
         "contactPoint": "Marten Kreijenbroek (mnk@2ba.nl)",
-        "roles": "Data Service Provider",
+        "roles": [
+            {
+                "role": "Nader te bepalen"
+            }
+        ],
+        "adherence": {
+            "status": "NotActive",
+            "start_date": "2024-06-18T00:00:00",
+            "end_date": "None"
+            },
+        "certifications": [],
         "service_id": "6c8dcf9e-a217-413f-a343-618570d56be1",
         "feature": "DEMO - Handelsdata 2BA",
         "description": "Retrieve basis productdata with etim features",
@@ -158,6 +237,7 @@
         "hasPolicy":"None",
         "version": "v0.1 / proof of concept",
         "token_endpoint": "",
+        "dataServiceConsumerType" : "M2M",
         "is_public": "Yes",
         "endpointDescription": "",
         "conformsTo": "DICO product line",
@@ -165,6 +245,7 @@
         "securityLevel": "Not applicable",
         "accessRights": "Authorized access only. This service is provided only for demonstration purposes within the DSGO program",
         "serviceLevelAgreements": "Availability of the service is not guaranteed",
+        "license":"Geen",
         "keywords": ["Handels data","2BA","ETIM", "DICO"],
         "costs": "Not applicable",
         "path_image": "images/logo_2ba.png",
@@ -172,9 +253,19 @@
     },
     {
         "party_id": "EU.EORI.NL066766052",
-        "dataServiceProviderName": "Cadac Group BV",
+        "party_name": "Cadac Group BV",
         "contactPoint": "bjornramaekers@cadac.com, richardbuijsman@cadac.com",
-        "roles": "in toetredingsproces voor datadienstgebruiker",
+        "roles": [
+            {
+                "role": "Nader te bepalen"
+            }
+        ],
+        "adherence": {
+            "status": "NotActive",
+            "start_date": "2024-06-18T00:00:00",
+            "end_date": "None"
+            },
+        "certifications": [],
         "service_id": "b08b50a5-b58a-4d05-96c3-58c3f4c5ca46",
         "feature": "DEMO - Cadac Connect",
         "description": "Cadac Connect verbindt informatiesystemen en faciliteert data logistiek op veilige manier.",
@@ -182,6 +273,7 @@
         "hasPolicy":"Niet van toepassing",
         "version": "Niet van toepassing",
         "token_endpoint": "",
+        "dataServiceConsumerType" : "M2M",
         "is_public": "Yes",
         "endpointDescription": "",
         "conformsTo": "IDS (Information Delivery Specification – buildingSMART International)",
@@ -189,6 +281,7 @@
         "securityLevel": "Niet van toepassing",
         "accessRights": "Niet van toepassing",
         "serviceLevelAgreements": "PoC beschikbaar op aanvraag",
+        "license":"Geen",
         "keywords": ["ILS","IDS","ILS Configurator"],
         "costs": "Niet van toepassing",
         "path_image": "images/logo_cadac.png",
