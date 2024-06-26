@@ -286,12 +286,5 @@
         "costs": "Niet van toepassing",
         "path_image": "images/logo_cadac.png",
         "path_thumbnail": "images/logo_cadac.png"
-    },
-    {
-        "service_id": "b14b50a5-b58a-4d05-96c3-58c3f4c5ca46",
-        "feature": "Bauke's test",
-        "description": "Brief description of the service.",
-        "path_image": "images/logo_dsgo_small.png",
-        "path_thumbnail": "images/logo_dsgo_small.png"
     }
 ]
