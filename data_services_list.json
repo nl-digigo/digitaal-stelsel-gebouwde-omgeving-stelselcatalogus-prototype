@@ -293,6 +293,5 @@
         "description": "Brief description of the service.",
         "path_image": "images/logo_dsgo_small.png",
         "path_thumbnail": "images/logo_dsgo_small.png"
-        // Add additional service details as needed
     }
 ]
